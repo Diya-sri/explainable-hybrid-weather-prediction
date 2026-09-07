@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
+</head>
+
+<body>
+  <div class="rain-field"></div>
+
+  <div class="shell">
+
+    <a href="{{ url_for('predict') }}" class="back-link">
+      Back to predictor
+    </a>
+
+    <div class="result-wrap">
+
+      <div class="panel result-panel">
+
+        <div class="eyebrow">Forecast Output</div>
+
+        <h1>Prediction result</h1>
+
+
+        <!-- PREDICTION -->
+
+        <div class="reading">
+
+          <div class="reading-item">
+            <div class="label">Predicted Weather</div>
+
+            <div class="value">
+              {{ result }}
+            </div>
+          </div>
+
+
+          <div class="reading-item">
+            <div class="label">Prediction Confidence</div>
+
+            <div class="value accent">
+              {{ confidence }}%
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- PREDICTION DETAILS -->
+
+        <div class="section-label">
+          Prediction Details
+        </div>
+
+        <p class="section-note">
+
+          <strong>Location:</strong> {{ city }}
+
+          <br>
+
+          <strong>Region:</strong> {{ state }}
+
+          <br>
+
+          <strong>Date:</strong> {{ date }}
+
+        </p>
+
+
+        <!-- EXPLANATION -->
+
+        <div class="section-label">
+          Explanation
+        </div>
+
+        <p class="section-note">
+          {{ explanation }}
+        </p>
+
+
+        <!-- SHAP -->
+
+        {% if impact_image %}
+
+        <div class="section-label">
+          Exact SHAP Feature Influence
+        </div>
+
+        <p class="section-note">
+
+          Exact interventional Shapley values are computed across all feature
+          coalitions for the hybrid model. Positive values support the selected
+          class; negative values oppose it.
+
+        </p>
+
+        <div class="chart-frame">
+
+          <img
+            src="{{ url_for('static', filename=impact_image) }}"
+            alt="Local feature influence graph"
+          >
+
+        </div>
+
+        {% endif %}
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

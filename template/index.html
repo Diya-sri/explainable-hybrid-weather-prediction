@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Prediction System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
+</head>
+<body>
+  <div class="rain-field"></div>
+
+  <div class="shell">
+    <div class="topbar">
+      <span class="mark">Weather Prediction System</span>
+      <span>Explainable AI</span>
+    </div>
+
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Climate Forecasting · SHAP-Interpreted</div>
+        <h1>Predict weather conditions, and see exactly why the model thinks so.</h1>
+        <p class="lede">
+          A hybrid gradient-boosting and LSTM system trained on chronological
+          weather sequences across Indian states, paired with exact SHAP explanations so
+          every prediction shows the factors that drove it — not just the output.
+        </p>
+        <div class="stack-row">
+          <span class="stack-tag">Machine Learning</span>
+          <span class="stack-tag">LSTM</span>
+          <span class="stack-tag">Exact SHAP</span>
+          <span class="stack-tag">Flask</span>
+        </div>
+        <a href="/predict" class="btn btn-primary">Run a Prediction</a>
+      </div>
+    </div>
+
+    <div class="foot-note">Current and five-day forecasts · feature-level explainability</div>
+  </div>
+</body>
+</html>
