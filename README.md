@@ -21,6 +21,12 @@ This version combines a HistGradientBoosting classifier with a genuine LSTM impl
 
 <img width="1904" height="865" alt="image" src="https://github.com/user-attachments/assets/3896754d-db5a-4553-9633-6372bbdabc89" />
 
+<img width="1878" height="684" alt="image" src="https://github.com/user-attachments/assets/ebc7b51e-ded3-41bb-959d-710e289ece31" />
+<img width="1863" height="612" alt="image" src="https://github.com/user-attachments/assets/b222e77f-d2ea-479a-8e50-2dd6936c84da" />
+
+
+
+
 
 
 ## Architecture
