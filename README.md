@@ -1,6 +1,6 @@
 ## Live Demo
 
-[Launch the Weather Prediction App](https://explainable-hybrid-weather-prediction.onrender.com/predict)
+[Launch the Weather Prediction App](https://explainable-hybrid-weather-prediction.onrender.com)
 
 # Hybrid Explainable Indian Weather Classifier
 
