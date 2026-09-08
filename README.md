@@ -77,7 +77,7 @@ export OPENWEATHER_API_KEY="your-key"  # Windows PowerShell: $env:OPENWEATHER_AP
 python main.py
 ```
 
-Open `http://127.0.0.1:2000`.
+Open [http://127.0.0.1:2000](http://127.0.0.1:2000).
 
 Runtime artifacts are `hybrid_bundle.joblib` and `lstm_model.npz`. See `evaluation.json` for time-aware holdout results.
 
