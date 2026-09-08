@@ -6,6 +6,45 @@
 
 This version combines a HistGradientBoosting classifier with a genuine LSTM implemented in NumPy. Both models consume chronological sequences; their probability outputs are blended. Predictions use OpenWeather five-day forecast sequences and exact interventional Shapley values over all 2^11 feature coalitions.
 
+## Key features
+
+- Hybrid ensemble combining gradient boosting and a recurrent neural network
+- Chronological eight-step weather sequences grouped by location
+- Time-aware train, validation, and holdout splits to reduce temporal leakage
+- Exact local Shapley explanations for each predicted weather class
+- Live five-day forecast inputs from OpenWeather
+- Flask interface, automated tests, Docker packaging, and Render deployment
+
+## Architecture
+
+```mermaid
+flowchart TD
+    A[Historical weather data] --> B[Clean and encode features]
+    B --> C[Eight-step chronological sequences]
+    C --> D[HistGradientBoosting]
+    C --> E[NumPy LSTM]
+    D --> F[Weighted probability blend]
+    E --> F
+    F --> G[Weather class prediction]
+    F --> H[Exact Shapley explanation]
+```
+
+At inference time, the application retrieves forecast observations for the selected Indian location, applies the saved encoders and scaler, and sends the resulting sequence to both models. Their class probabilities are blended using a validation-selected weight.
+
+## Technology stack
+
+- **Modeling:** Python, NumPy, pandas, scikit-learn
+- **Deep learning:** custom LSTM implementation in NumPy
+- **Explainability:** exact interventional Shapley-value computation
+- **Application:** Flask, HTML, CSS, JavaScript
+- **Delivery:** GitHub Actions, Docker, Gunicorn, Render
+
+## Data and preprocessing
+
+The included `dataset/IndianWeatherRepository.csv` contains historical observations from Indian locations. Training derives calendar features from timestamps, groups detailed conditions into broader weather classes, ordinal-encodes location and region, standardizes numerical features, and constructs rolling eight-observation sequences independently for each location. Encoders and scalers are fitted only on the training period.
+
+The 11 model features are year, month, day, location, region, temperature, precipitation, humidity, cloud cover, pressure, and wind speed.
+
 ## Setup
 
 ```bash
@@ -34,6 +73,8 @@ different library versions.
 | Hybrid | 93.38% | 63.27% |
 
 The later chronological holdout contains 18,992 sequences. The hybrid is genuine, but it does not outperform gradient boosting alone on this test period.
+
+See [`evaluation.json`](evaluation.json) for the saved metrics and [`MODEL_CARD.md`](MODEL_CARD.md) for intended use, evaluation details, and limitations.
 
 ## Tests
 
