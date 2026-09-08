@@ -25,14 +25,11 @@ This version combines a HistGradientBoosting classifier with a genuine LSTM impl
 
 <img width="1904" alt="Forecast date and location input form" src="https://github.com/user-attachments/assets/3896754d-db5a-4553-9633-6372bbdabc89">
 
-### Prediction result
+### Prediction Result and SHAP Explanation
 
-<img width="1878" alt="Weather classification result and prediction confidence" src="https://github.com/user-attachments/assets/ebc7b51e-ded3-41bb-959d-710e289ece31">
+<img width="1878" alt="Weather prediction result, confidence, and explanation" src="https://github.com/user-attachments/assets/ebc7b51e-ded3-41bb-959d-710e289ece31">
 
-### SHAP explanation
-
-<img width="1879" alt="Exact SHAP feature-influence explanation" src="https://github.com/user-attachments/assets/acb8c6c1-8548-4751-95e8-a932a6198b43">
-
+<img width="1879" alt="Continuation of the prediction result showing the exact SHAP feature-influence chart" src="https://github.com/user-attachments/assets/acb8c6c1-8548-4751-95e8-a932a6198b43">
 
 
 
