@@ -1,4 +1,4 @@
-# Hybrid Explainable Indian Weather Classifier
+# Hybrid Explainable Weather Classifier
 
 ## Live Demo
 
