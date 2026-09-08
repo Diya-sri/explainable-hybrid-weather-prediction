@@ -17,12 +17,21 @@ This version combines a HistGradientBoosting classifier with a genuine LSTM impl
 
 ## Screenshots
 
-<img width="1915" height="867" alt="image" src="https://github.com/user-attachments/assets/e1fd2cdc-1e0e-4dea-9e26-13d1a560f154" />
+### Landing page
 
-<img width="1904" height="865" alt="image" src="https://github.com/user-attachments/assets/3896754d-db5a-4553-9633-6372bbdabc89" />
+<img width="1915" alt="Weather prediction application landing page" src="https://github.com/user-attachments/assets/e1fd2cdc-1e0e-4dea-9e26-13d1a560f154">
 
-<img width="1878" height="684" alt="image" src="https://github.com/user-attachments/assets/ebc7b51e-ded3-41bb-959d-710e289ece31" />
-<img width="1879" height="618" alt="image" src="https://github.com/user-attachments/assets/acb8c6c1-8548-4751-95e8-a932a6198b43" />
+### Forecast input
+
+<img width="1904" alt="Forecast date and location input form" src="https://github.com/user-attachments/assets/3896754d-db5a-4553-9633-6372bbdabc89">
+
+### Prediction result
+
+<img width="1878" alt="Weather classification result and prediction confidence" src="https://github.com/user-attachments/assets/ebc7b51e-ded3-41bb-959d-710e289ece31">
+
+### SHAP explanation
+
+<img width="1879" alt="Exact SHAP feature-influence explanation" src="https://github.com/user-attachments/assets/acb8c6c1-8548-4751-95e8-a932a6198b43">
 
 
 
