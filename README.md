@@ -1,8 +1,8 @@
+# Hybrid Explainable Indian Weather Classifier
+
 ## Live Demo
 
 [Launch the Weather Prediction App](https://explainable-hybrid-weather-prediction.onrender.com)
-
-# Hybrid Explainable Indian Weather Classifier
 
 This version combines a HistGradientBoosting classifier with a genuine LSTM implemented in NumPy. Both models consume chronological sequences; their probability outputs are blended. Predictions use OpenWeather five-day forecast sequences and exact interventional Shapley values over all 2^11 feature coalitions.
 
